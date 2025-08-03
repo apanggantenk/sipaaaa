@@ -1,0 +1,57 @@
+Berikut adalah contoh sederhana kode HTML, CSS, dan JavaScript untuk membuat animasi bunga dan ikon hati (love) yang jatuh dari atas layar. Kode ini bisa digunakan untuk menambahkan sentuhan romantis pada halaman web Anda:
+
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animasi Bunga dan Love</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    }
+
+    .falling {
+      position: absolute;
+      top: -50px;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const createFallingElement = (emoji) => {
+      const element = document.createElement('div');
+      element.textContent = emoji;
+      element.style.fontSize = `${Math.random() * 20 + 20}px`;
+      element.style.left = `${Math.random() * 100}vw`;
+      element.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      element.classList.add('falling');
+      document.body.appendChild(element);
+
+      setTimeout(() => element.remove(), 5000);
+    };
+
+    setInterval(() => {
+      createFallingElement('🌸'); // Bunga
+      createFallingElement('❤️'); // Love
+    }, 300);
+  </script>
+</body>
+</html>
+
+Penjelasan:
+HTML: Struktur dasar halaman web.
+CSS: Mengatur tampilan latar belakang dan animasi elemen yang jatuh.
+JavaScript: Membuat elemen bunga dan hati secara dinamis, lalu mengatur animasi jatuhnya.
+
+Salin kode ini ke file .html Anda, lalu buka di browser untuk melihat animasi bunga dan hati yang jatuh dengan indah. Semoga bermanfaat! 😊
