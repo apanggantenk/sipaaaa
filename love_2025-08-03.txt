@@ -1,6 +1,3 @@
-Berikut adalah contoh sederhana kode HTML, CSS, dan JavaScript untuk membuat animasi bunga dan ikon hati (love) yang jatuh dari atas layar. Kode ini bisa digunakan untuk menambahkan sentuhan romantis pada halaman web Anda:
-
-Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
