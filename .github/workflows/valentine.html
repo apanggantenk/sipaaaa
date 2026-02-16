@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Valentine for Syifa Aulia Rahman</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 3em;
+      animation: pulse 2s infinite;
+    }
+    p {
+      max-width: 700px;
+      font-size: 1.3em;
+      line-height: 1.6em;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); color: #ffdde1; }
+      100% { transform: scale(1); }
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 6s infinite;
+    }
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+    .heart::before { top: -10px; left: 0; }
+    .heart::after { left: 10px; top: 0; }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+      100% { transform: translateY(-600px) rotate(45deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Slide 1 -->
+  <section>
+    <h1>💖 Happy Valentine, Syifa Aulia Rahman 💖</h1>
+    <p>
+      Be, hari ini aku cuma mau bilang, kamu itu cahaya di setiap hariku.  
+      Seperti matahari pagi yang bikin hangat, seperti senyum yang bikin tenang.  
+      Happy Valentine, Syifa! Semoga kamu selalu bahagia.
+    </p>
+  </section>
+
+  <!-- Slide 2 -->
+  <section style="background: linear-gradient(135deg, #fbc2eb, #a6c1ee);">
+    <h1>🌹 Kata Romantis 🌹</h1>
+    <p>
+      Babe, kalau cinta itu sebuah lagu, kamu adalah nada yang paling indah.  
+      Kalau cinta itu sebuah film, kamu adalah pemeran utama yang bikin semua orang jatuh hati.  
+      Kamu adalah alasan kenapa kata "sayang" terasa nyata.
+    </p>
+  </section>
+
+  <!-- Slide 3 -->
+  <section style="background: linear-gradient(135deg, #ffecd2, #fcb69f); color:#333;">
+    <h1>i love you babe</h1>
+    <p>
+      Jika cinta adalah laut,
+      maka aku ingin hanyut di ombakmu.
+      Jika cinta adalah angin,
+      maka aku ingin terbang bersama hembusmu.
+      Dan jika cinta adalah waktu,
+      maka aku ingin berhenti di detik
+      di mana aku bisa memanggilmu.
+      <br>
+     <br>Kamu adalah syair yang tak pernah selesai ditulis,
+     indah, lembut, dan penuh makna.
+     Happy Valentine,be
+     semoga hati mungil kamuuu selalu dipenuhi cinta
+     seperti bait-bait indah yang tak pernah pudar.
+
+    </p>
+  </section>
+
+  <!-- Slide 4 -->
+  <section style="background: linear-gradient(135deg, #cfd9df, #e2ebf0); color:#333;">
+    <h1>💌 Penutup 💌</h1>
+    <p>
+      Jadi,Syifa Aulia Rahman, Happy Valentine!  
+      Semoga hari-harimu penuh cinta, penuh tawa, dan penuh kebahagiaan.  
+      Ingat, kamu itu berharga, lucu, dan selalu bikin dunia jadi lebih indah.  
+      Dari seseorang yang ingin bikin kamu tersenyum hari ini. 💖
+    </p>
+  </section>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.top = window.innerHeight + 'px';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+</body>
+</html>
